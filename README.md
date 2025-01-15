@@ -1,37 +1,37 @@
-# Calculateur de Suite de Fibonacci avec Mémorisation
+# Fibonacci Sequence Calculator with Memoization
 
-Ce projet implémente un calculateur de nombres de Fibonacci utilisant la technique de mémorisation (memoization) pour optimiser les performances.
+This project implements a Fibonacci number calculator using memoization technique to optimize performance.
 
 ## Description
 
-Le fichier `main.py` contient deux éléments principaux :
+The `main.py` file contains two main components:
 
-1. **Classe Value**
-   - Gère la persistance des données via un fichier JSON
-   - Charge et sauvegarde automatiquement les résultats calculés
-   - Utilise `value.json` comme fichier de stockage
+1. **Value Class**
+   - Manages data persistence through a JSON file
+   - Automatically loads and saves calculated results
+   - Uses `value.json` as storage file
 
-2. **Fonction fibo**
-   - Calcule le n-ième nombre de la suite de Fibonacci
-   - Utilise la mémorisation pour éviter les calculs redondants
-   - Stocke les résultats intermédiaires dans un fichier JSON
+2. **fibo Function**
+   - Calculates the nth number in the Fibonacci sequence
+   - Uses memoization to avoid redundant calculations
+   - Stores intermediate results in a JSON file
 
-## Fonctionnement
+## How it Works
 
-Le programme utilise une approche récursive avec mémorisation pour calculer les nombres de Fibonacci. Les résultats déjà calculés sont stockés dans un fichier JSON pour éviter de recalculer les mêmes valeurs lors des prochaines exécutions.
+The program uses a recursive approach with memoization to calculate Fibonacci numbers. Previously calculated results are stored in a JSON file to avoid recalculating the same values in future executions.
 
-## Utilisation
+## Usage
 
 ```python
 from main import Value, fibo
 
-# Créer une instance de Value pour la mémorisation
+# Create a Value instance for memoization
 memory = Value()
 
-# Calculer le 10ème nombre de Fibonacci
+# Calculate the 10th Fibonacci number
 result = fibo(10, memory)
 
 print(result)
 ```
 
-Ce code calculera le 10ème nombre de Fibonacci et affichera le résultat. Les résultats intermédiaires seront stockés dans le fichier `value.json` pour une utilisation future.
+This code will calculate the 10th Fibonacci number and display the result. Intermediate results will be stored in the `value.json` file for future use.
